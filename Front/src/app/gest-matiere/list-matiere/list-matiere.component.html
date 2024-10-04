@@ -1,0 +1,31 @@
+
+
+
+  <div>
+    <div class="container">
+      <h2>List des Matiers
+     </h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+      
+          <div class="col col-1">Nom cours</div>
+          <div class="col col-2">description</div>
+          <div class="col col-2">absencesAutorisees</div>
+          <div class="col col-3">  <button class="button-37" type="button" (click)="navigateTo('./createMatiere')">Ajouter</button></div>
+        
+        </li>
+        <li class="table-row" *ngFor="let course of courses" (click)="selectCourse(course)">
+
+          
+          
+          <div class="col col-1" data-label="Id">{{ course.nomCours }}</div>
+          <div class="col col-2" data-label="Nom">{{ course.description }}</div>
+          <div class="col col-2" data-label="Nom">{{ course.absencesAutorisees }}</div>
+          <div class="col col-3" data-label="Actions"><button class="button-38" type="button" (click)="deleteCourse(course)">Supprimer</button></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+

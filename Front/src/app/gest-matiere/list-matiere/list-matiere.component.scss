@@ -1,0 +1,193 @@
+body {
+  font-family: 'lato', sans-serif;
+}
+
+
+.small-image {
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #dfdfdf;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-0 {
+   
+    flex-basis: 20%;
+  }
+  .col-1 {
+    flex-basis: 20%;
+  }
+  .col-2 {
+    flex-basis: 30%;
+  }
+  .col-3 {
+    flex-basis: 20%;
+  }
+  .col-4 {
+    flex-basis: 20%;
+  }
+  .col-5{
+    flex-basis: 5%;
+  }
+  .col-6{
+    flex-basis: 5%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+.button-37 {
+background-color: #13aa52;
+border: 1px solid #13aa52;
+border-radius: 4px;
+box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 16px;
+font-weight: 400;
+outline: none;
+outline: 0;
+
+text-align: center;
+transform: translateY(0);
+transition: transform 150ms, box-shadow 150ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-37:hover {
+box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+transform: translateY(-2px);
+}
+
+@media (min-width: 500px) {
+.button-37 {
+  padding: 10px 20px;
+}
+}
+.button-38 {
+background-color: #aa1313;
+border: 1px solid #f70101;
+border-radius: 4px;
+box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 16px;
+font-weight: 400;
+outline: none;
+outline: 0;
+
+text-align: center;
+transform: translateY(0);
+transition: transform 150ms, box-shadow 150ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-38:hover {
+box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+transform: translateY(-2px);
+}
+
+@media (min-width: 500px) {
+.button-38 {
+  padding: 10px 20px;
+}
+}
+
+
+.button-39 {
+  background-color: #e9e4e4d1;
+  border: 1px solid #ffffffe0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  
+  .button-39:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+  }
+  
+  @media (min-width: 500px) {
+  .button-39 {
+    padding: 5px 10px;
+  }
+  }

@@ -1,0 +1,230 @@
+/* 
+    .etudiant-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 80px;
+  }
+  
+  .etudiant-table .table-header {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .etudiant-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .etudiant-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .etudiant-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .etudiant-table .action-button {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .etudiant-table .edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .etudiant-table .edit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .etudiant-table .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .etudiant-table .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .back-button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-button:hover {
+    background-color: #005f7e;
+  }
+  .cours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+}
+
+.cours-table .table-header {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+}
+
+.cours-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.cours-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cours-table tr:hover {
+    background-color: #ddd;
+}
+
+.cours-table .action-button {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+.cours-table .edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cours-table .edit-button:hover {
+    background-color: #45a049;
+}
+
+.cours-table .delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.cours-table .delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.etudiant-table-caption,
+.cours-table-caption {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.space-between-tables {
+  height: 40px; 
+} */
+
+.etudiant-table-caption,
+.cours-table-caption {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.responsive-table {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.responsive-table th,
+.responsive-table td {
+    white-space: nowrap;
+}
+
+.responsive-table th {
+    background-color: #95A5A6;
+    color: #fff;
+    text-align: center;
+}
+
+.responsive-table td {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.responsive-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.responsive-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.action-button {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+.edit-button {
+  background-color: #132faa;
+  border-color: #132faa;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0a27ab;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.back-button {
+    background-color: #6C7A89;
+    border-color: #6C7A89;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #005f7e;
+}

@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="half-page2">
+   
+    
+  </div>
+  <div class="half-page">
+    <div class="card">
+      <form (ngSubmit)="onSubmit()">
+        <!-- Existing form fields -->
+        <!-- Assuming you've already added ngModel for professeurToEdit -->
+        <div class="avatar">
+          <img src="../../assets/avatar.png">
+        </div>
+        <div>
+          <label for="idUser" class="formbold-form-label">ID Utilisateur:</label>
+          <input type="number" id="idUser" name="idUser" [(ngModel)]="professeurToEdit.idUser" class="formbold-form-input" required>
+        </div>
+        <div>
+          <label for="nom" class="formbold-form-label">Nom:</label>
+          <input type="text" id="nom" name="nom" [(ngModel)]="professeurToEdit.nom" class="formbold-form-input" required>
+        </div>
+        <div>
+          <label for="prenom" class="formbold-form-label">Prénom:</label>
+          <input type="text" id="prenom" name="prenom" [(ngModel)]="professeurToEdit.prenom" class="formbold-form-input" required>
+        </div>
+        <div>
+          <label for="departement" class="formbold-form-label">Département:</label>
+          <input type="text" id="departement" name="departement" [(ngModel)]="professeurToEdit.departement" class="formbold-form-input" required>
+        </div>
+      <label for="departement" class="formbold-form-label">Groupes:</label>
+      <div class="checkbox-container">
+        <div *ngFor="let groupe of allGroupes" class="card2">
+          <input type="checkbox" id="{{ groupe.nom }}" name="groupes" [(ngModel)]="selectedGroupes[groupe.nom]" [value]="groupe.nom">
+          <label for="{{ groupe.nom }}">{{ groupe.nom }}</label>
+        </div>
+      </div>
+        <button type="submit" class="formbold-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="half-page2"></div>
+</div>

@@ -1,0 +1,122 @@
+/* login.component.scss */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f2f1;
+  
+    .login-form {
+      max-width: 450px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      box-sizing: border-box; /* Make sure padding doesn't affect overall width */
+    }
+  
+    .form-group {
+      margin-bottom: 1rem;
+      display: flex; /* Aligns the label and input */
+      flex-direction: column;
+    }
+
+    .register-title {
+      font-size: 1.5rem; /* Adjust size as needed */
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      margin-bottom: 2rem; /* Add space below the title */
+    }
+  
+    label {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem; /* Add space between label and input */
+    }
+  
+    input {
+      width: calc(100% - 2rem); /* Reduces the input width by the padding */
+      padding: 1rem;
+      margin: 0 auto; /* This will center the input fields */
+      border-radius: 4px;
+      border: 1px solid #8a8886;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  
+    input::placeholder {
+      color: #8a8886;
+    }
+  
+    .submit-button {
+      width: calc(100% - 2rem); /* Match input width */
+      padding: 1rem;
+      margin: 0 auto 1rem auto; /* Center button and add space on top */
+      border-radius: 4px;
+      border: none;
+      background-color: #0078d4;
+      color: white;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #005a9e;
+      }
+    }
+  
+    .error-message {
+      color: #d83b01;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .back-arrow {
+      // Sets the width of the image to a fixed size
+      width: 50px;  // Adjust this value to scale the size of the image as needed
+      height: auto; // Maintains the aspect ratio of the image
+    
+      // Optionally, add a hover effect to indicate it's clickable
+      &:hover {
+        opacity: 0.8; // Slightly dims the image on hover
+        cursor: pointer; // Changes the cursor to indicate it's clickable
+      }
+    
+      // Responsive design: Adjust size on smaller screens if necessary
+      @media (max-width: 768px) {
+        width: 40px; // Smaller size on mobile devices
+      }
+    }
+    
+
+    select {
+      width: calc(100% - 2rem); // Match the width of the input fields
+      padding: 1rem;
+      margin: 0 auto; // Center the select field
+      border-radius: 4px;
+      border: 1px solid #8a8886;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      background-color: white;
+      -webkit-appearance: none; // Removes default styling provided by the browser
+      -moz-appearance: none;
+      appearance: none;
+      position: relative;
+      cursor: pointer;
+  
+      // Styling for the dropdown arrow
+      &:not([multiple]) {
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%238a8886" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 0.65rem;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: #0078d4;
+      }
+    }
+  }
+  

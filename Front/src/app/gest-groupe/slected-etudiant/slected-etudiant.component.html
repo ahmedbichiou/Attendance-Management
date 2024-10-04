@@ -1,0 +1,59 @@
+<!-- <div>
+  <h2>Absences for {{ selectedEtudiant?.nom }} {{ selectedEtudiant?.prenom }}</h2>
+  <ng-container *ngIf="absences && absences.length > 0; else noAbsences">
+    <table class="absence-table">
+      <thead>
+        <tr>
+          <th class="table-header">ID Absence</th>
+          <th class="table-header">Raison</th>
+          <th class="table-header">Statut</th>
+          <th class="table-header">Session</th>
+          <th class="table-header">Cours</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let absence of absences">
+            <td>{{ absence.idAbsence }}</td>
+            <td>{{ absence.raison || 'N/A' }}</td>
+            <td>{{ absence.statut }}</td>
+            <td>{{ absence.session.dateHeure }} - {{ absence.session.salle }}</td>
+            <td>{{ absence.session.nomCours }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #noAbsences>
+    <p>Pas d'absences</p>
+  </ng-template>
+</div>
+<button class="back-button" (click)="goBack()">Go Back</button>
+ -->
+ <div class="container">
+  <h2>Absences for {{ selectedEtudiant?.nom }} {{ selectedEtudiant?.prenom }}</h2>
+  <ng-container *ngIf="absences && absences.length > 0; else noAbsences">
+    <table class="absence-table responsive-table">
+      <thead>
+        <tr>
+          <th class="table-header col-1">ID Absence</th>
+          <th class="table-header col-2">Raison</th>
+          <th class="table-header col-3">Statut</th>
+          <th class="table-header col-4">Session</th>
+          <th class="table-header col-5">Cours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let absence of absences">
+          <td class="col-1">{{ absence.idAbsence }}</td>
+          <td class="col-2">{{ absence.raison || 'N/A' }}</td>
+          <td class="col-3">{{ absence.statut }}</td>
+          <td class="col-4">{{ absence.session.dateHeure }} - {{ absence.session.salle }}</td>
+          <td class="col-5">{{ absence.session.nomCours }}</td> 
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #noAbsences>
+    <p>Pas d'absences</p>
+  </ng-template>
+</div>
+<button class="back-button" (click)="goBack()">Go Back</button>

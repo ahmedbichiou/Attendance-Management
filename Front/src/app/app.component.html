@@ -1,0 +1,65 @@
+<div class="wrapper" [class.collapse]="isCollapsed">
+
+  <div class="top_navbar" *ngIf="!ishidden" >
+    <div class="hamburger" (click)="toggleSidebar()">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">
+        {{user?.username}}
+      </div>
+      <ul>
+        <li><a  (click)="gotoprofile()">
+          <i class="fas fa-search">P</i>
+          </a></li>
+          <li><a  (click)="logout()">
+            <i class="fas fa-search">L</i>
+            </a></li>
+
+      </ul>
+    </div>
+  </div>
+ 
+
+  <div class="sidebar" *ngIf="!ishidden" > <!----ngIf="!isgroupeActive"------>
+    <ul>
+      <li><a (click)="gotogroupes()" [class.active]="isgroupeActive" *ngIf="IsAdminLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Groupes</span>
+      </a></li>
+      <li><a (click)="goTosubjects()" [class.active]="isSubjectsActive" *ngIf="IsAdminLoggedin">
+        <span class="icon"><i class="fas fa-file-video"></i></span>
+        <span class="title">Cours</span>
+      </a></li>
+      <li><a (click)="gotoprofesseurs()" [class.active]="isprofesseurActive" *ngIf="IsAdminLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Professeurs</span>
+      </a></li>
+      <li><a (click)="gotoetudiants()" [class.active]="isetudiantActive" *ngIf="IsAdminLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Etudiants</span>
+      </a></li>
+      <li><a (click)="gotolistetudiant()" [class.active]="isprofesseurActive" *ngIf="IsProfesseurLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Tous etudiants</span>
+      </a></li>
+      <li><a (click)="gotolistegroupeprof()" [class.active]="isprofesseurActive" *ngIf="IsProfesseurLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Absences</span>
+      </a></li>
+      <li><a (click)="gotohomepageetud()" [class.active]="isprofesseurActive" *ngIf="IsEtudiantLoggedin">
+        <span class="icon"><i class="fas fa-blog"></i></span>
+        <span class="title">Matiers</span>
+      </a></li>
+      
+
+    </ul>
+  </div>
+
+
+  <div [class.main_container]="!ishidden">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="groupe.nom" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+   -->
+   <form (ngSubmit)="onSubmit()" class="wrapper">
+    <div class="half-page">
+      <div class="card">
+        <div>
+          <label for="nom" class="formbold-form-label">Nom:</label>
+          <input type="text" id="nom" name="nom" [(ngModel)]="groupe.nom" class="formbold-form-input" required>
+        </div>
+        <button type="submit" class="formbold-btn">Submit</button>
+      </div>
+    </div>
+    <div class="half-page2">
+      <!-- Add any additional content for the other half of the page if needed -->
+    </div>
+  </form>
+  

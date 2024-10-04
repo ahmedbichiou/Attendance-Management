@@ -1,0 +1,182 @@
+/* 
+  .groupe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 80px;
+  }
+  
+  .groupe-table .table-header {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .groupe-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .groupe-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .groupe-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .groupe-table .action-button {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .groupe-table .edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .groupe-table .edit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .groupe-table .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .groupe-table .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .back-button {
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-button:hover {
+    background-color: #005f7e; 
+  }
+
+  .create-button{
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .create-button:hover {
+    background-color: #f43325;
+  }
+   */
+   .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .groupe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .groupe-table th, .groupe-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .groupe-table th {
+    background-color: #95A5A6;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .groupe-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .action-button {
+    background-color: #132faa;
+    border: 1px solid #132faa;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    text-align: center;
+    padding: 8px 16px; /* Adjusted padding */
+    transition: box-shadow 150ms, transform 150ms;
+  }
+  
+  .action-button:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+  }
+  
+  .delete-button {
+    background-color: #aa1313;
+    border-color: #aa1313;
+    margin-right: 10px;
+  }
+  
+  .create-button {
+    background-color: #132faa;
+    border-color: #132faa;
+    margin-right: 10px;
+    padding: 8px 16px; /* Adjusted padding */
+    margin-top: 40px;
+  }
+  
+  .back-button {
+    transition: box-shadow 150ms, transform 150ms;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    text-align: center;
+    background-color: #6C7A89;
+    border-color: #6C7A89;
+    padding: 8px 16px; /* Adjusted padding */
+    margin-top: 40px;
+  }
+
+  .back-button:hover {
+    transform: translateY(-2px);
+  }
+  

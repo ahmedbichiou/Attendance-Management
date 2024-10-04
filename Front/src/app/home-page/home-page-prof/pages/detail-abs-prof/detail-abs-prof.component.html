@@ -1,0 +1,25 @@
+<div>
+  <div class="container">
+    <h2>{{ student?.nom }}  {{ student?.prenom }} </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">IdS</div>
+        <div class="col col-2">Salle</div>
+        <div class="col col-3">Date et Temp</div>
+        <div class="col col-4">Status</div>
+        <div class="col col-5">raison</div>
+        <div class="col col-6">Actions</div> <!-- Add a column for actions -->
+      </li>
+      <li class="table-row" *ngFor="let item of filteredList2">
+        <div class="col col-1" data-label="Id">{{ item.session.idSession }}</div>
+        <div class="col col-2" data-label="Nom">{{ item.session.salle }}</div>
+        <div class="col col-3" data-label="Prenom">{{ item.session.dateHeure }}</div>
+        <div class="col col-4" data-label="statut">{{ item.statut }}</div>
+        <div class="col col-5" data-label="Nombre Abscences">{{ item.raison }}</div>
+        <div class="col col-6" data-label="Actions">
+          <button (click)="deleteAbsence(item.idAbsence)" class="button-37">Delete</button> <!-- Add delete button -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<!-- <div *ngIf="selectedProfesseur">
+    <h2>Professor Details</h2>
+    <p><strong>Name:</strong> {{ selectedProfesseur.nom }} {{ selectedProfesseur.prenom }}</p>
+    <p><strong>Department:</strong> {{ selectedProfesseur.departement }}</p>
+  </div>
+  <div *ngIf="!selectedProfesseur">
+    <p>No professor information available.</p>
+  </div>
+   -->
+   <div class="wrapper">
+    <div class="half-page">
+      <!-- Your existing content for the professor's details -->
+      <div *ngIf="selectedProfesseur" class="card">
+        <div class="etudiant-info">
+          <div class="avatar">
+            <!-- Assuming you have a placeholder image for the professor -->
+            <img src="../../assets/avatar.png" alt="Professor Avatar">
+          </div>
+          <div>
+            <div class="detail">
+              <span class="label">Nom:</span>
+              <span>{{ selectedProfesseur.nom }}</span>
+            </div>
+            <div class="detail">
+              <span class="label">Prenom:</span>
+              <span>{{ selectedProfesseur.prenom }}</span>
+            </div>
+            <div class="detail">
+              <span class="label">Departement:</span>
+              <span>{{ selectedProfesseur.departement }}</span>
+            </div>
+            <!-- Add more details if needed -->
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!selectedProfesseur" class="card">
+        <p>No professor information available.</p>
+      </div>
+    </div>
+    <div class="half-page2">
+      <!-- Your existing content for the other half of the page -->
+    </div>
+  </div>
+  <div class="half-page2">
+    <!-- Display course sessions -->
+    <div class="card" *ngIf="selectedCoursSessions && selectedCoursSessions.length > 0">
+      <h2>Course Sessions</h2>
+      <ul>
+        <li *ngFor="let session of selectedCoursSessions">
+           <p><strong>Date:</strong> {{ session.dateHeure | date }}</p>
+           <p><strong>Location:</strong> {{ session.salle }}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!selectedCoursSessions || selectedCoursSessions.length === 0" class="card">
+      <p>No sessions available for this course.</p>
+    </div>
+  </div>
+  <button class="back-button" (click)="goBack()">Go Back</button>
+  

@@ -1,0 +1,100 @@
+<!-- <table class="etudiant-table">
+    <caption class="etudiant-table-caption">Les étudiants du groupe</caption>
+    <thead>
+        <tr>
+            <th class="table-header">ID Etudiant</th>
+            <th class="table-header">ID Utilisateur</th>
+            <th class="table-header">Nom</th>
+            <th class="table-header">Prénom</th>
+            <th class="table-header">Numéro Tel</th>
+            <th class="table-header">Groupe</th>
+            <th class="table-header">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let etudiant of etudiants" (click)="saveSelectedEtudiant(etudiant)">
+            <td>{{ etudiant.idEtud }}</td>
+            <td>{{ etudiant.idUser }}</td>
+            <td>{{ etudiant.nom }}</td>
+            <td>{{ etudiant.prenom }}</td>
+            <td>{{ etudiant.numeroTel }}</td>
+            <td>{{ selectedGroupe.nom }}</td> 
+            <td>
+                <button class="action-button edit-button" type="button" (click)="editEtudiant(etudiant)">Edit</button>
+                <button class="action-button delete-button" type="button" (click)="deleteEtudiant(etudiant)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="space-between-tables"></div>
+<table class="cours-table">
+    <caption class="cours-table-caption">Les matières étudiées par ce groupe</caption>
+    <thead>
+        <tr>
+            <th class="table-header">Nom Cours</th>
+            <th class="table-header">Description</th>
+            <th class="table-header">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cours of selectedGroupe.cours" (click)="saveSelectedCours(cours)">
+            <td>{{ cours.nomCours }}</td>
+            <td>{{ cours.description }}</td>
+            <td>
+                <button class="action-button delete-button" type="button" (click)="deleteCours(cours)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="back-button" (click)="goBack()">Go Back</button>
+ -->
+ <table class="etudiant-table responsive-table">
+    <caption class="etudiant-table-caption">Les étudiants du groupe</caption>
+    <thead>
+        <tr>
+            <th class="table-header col-1">ID Etudiant</th>
+            <th class="table-header col-2">ID Utilisateur</th>
+            <th class="table-header col-3">Nom</th>
+            <th class="table-header col-4">Prénom</th>
+            <th class="table-header col-5">Numéro Tel</th>
+            <th class="table-header col-6">Groupe</th>
+            <th class="table-header col-7">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let etudiant of etudiants" (click)="saveSelectedEtudiant(etudiant)">
+            <td class="col-1">{{ etudiant.idEtud }}</td>
+            <td class="col-2">{{ etudiant.idUser }}</td>
+            <td class="col-3">{{ etudiant.nom }}</td>
+            <td class="col-4">{{ etudiant.prenom }}</td>
+            <td class="col-5">{{ etudiant.numeroTel }}</td>
+            <td class="col-6">{{ selectedGroupe.nom }}</td>
+            <td class="col-7">
+                <button class="action-button edit-button button-37" type="button" (click)="editEtudiant(etudiant)">Edit</button>
+                <button class="action-button delete-button button-38" type="button" (click)="deleteEtudiant(etudiant)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="space-between-tables"></div>
+<table class="cours-table responsive-table">
+    <caption class="cours-table-caption">Les matières étudiées par ce groupe</caption>
+    <thead>
+        <tr>
+            <th class="table-header col-1">Nom Cours</th>
+            <th class="table-header col-2">Description</th>
+            <th class="table-header col-3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cours of selectedGroupe.cours" (click)="saveSelectedCours(cours)">
+            <td class="col-1">{{ cours.nomCours }}</td>
+            <td class="col-2">{{ cours.description }}</td>
+            <td class="col-3">
+                <button class="action-button delete-button button-38" type="button" (click)="deleteCours(cours)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="back-button" (click)="goBack()">Go Back</button>
+

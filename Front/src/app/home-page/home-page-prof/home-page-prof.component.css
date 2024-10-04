@@ -1,0 +1,11 @@
+.custom-image {
+    width: calc(60%);; /* Set the desired width */
+    height: calc(80%);; /* Maintain aspect ratio */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Set height to fill the viewport vertically */
+}

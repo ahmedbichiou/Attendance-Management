@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="half-page2">
+  </div>
+  <div class="half-page">
+    <form class="card" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="idUser" class="formbold-form-label">ID Utilisateur:</label>
+        <input type="number" id="idUser" name="idUser" [ngModel]="selectedEtudiant?.idUser" (ngModelChange)="selectedEtudiant!.idUser = $event" class="formbold-form-input" required>
+      </div>
+      <div>
+        <label for="nom" class="formbold-form-label">Nom:</label>
+        <input type="text" id="nom" name="nom" [ngModel]="selectedEtudiant?.nom" (ngModelChange)="selectedEtudiant!.nom = $event" class="formbold-form-input" required>
+      </div>
+      <div>
+        <label for="prenom" class="formbold-form-label">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" [ngModel]="selectedEtudiant?.prenom" (ngModelChange)="selectedEtudiant!.prenom = $event" class="formbold-form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="nomGroupe" class="formbold-form-label">Group</label>
+        <select class="form-control formbold-form-input" id="nomGroupe" name="nomGroupe" [ngModel]="selectedEtudiant?.nomGroupe" (ngModelChange)="updateGroupName($event)" required>
+          <option *ngFor="let groupe of allGroupes" [ngValue]="groupe.nom">{{ groupe.nom }}</option>
+        </select>
+      </div>
+      <div>
+        <label for="numeroTel" class="formbold-form-label">Numéro de téléphone:</label>
+        <input type="text" id="numeroTel" name="numeroTel" [ngModel]="selectedEtudiant?.numeroTel" (ngModelChange)="selectedEtudiant!.numeroTel = $event" class="formbold-form-input" required>
+      </div>
+      <button type="submit" class="formbold-btn">Submit</button>
+    </form>
+  </div>
+  <div class="half-page2">
+  </div>
+</div>

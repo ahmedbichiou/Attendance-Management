@@ -1,0 +1,50 @@
+<!-- <table class="etudiant-table">
+    <thead>
+        <tr>
+            <th class="table-header">ID</th>
+            <th class="table-header">Nom</th>
+            <th class="table-header">Prenom</th>
+            <th class="table-header">Numero Tel</th>
+            <th class="table-header">Groupe</th>
+            <th class="table-header">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let etudiant of etudiants">
+            <td>{{ etudiant.idEtud }}</td>
+            <td>{{ etudiant.nom }}</td>
+            <td>{{ etudiant.prenom }}</td>
+            <td>{{ etudiant.numeroTel }}</td>
+            <td>{{ etudiant.nomGroupe }}</td>
+            <td>
+                <button class="action-button edit-button" type="button" (click)="editEtudiant(etudiant)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table> 
+
+
+ -->
+ <div class="container">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">ID</div>
+        <div class="col col-2">Nom</div>
+        <div class="col col-3">Prenom</div>
+        <div class="col col-4">Numero Tel</div>
+        <div class="col col-5">Groupe</div>
+        <div class="col col-6">Actions</div>
+      </li>
+      <li class="table-row" *ngFor="let etudiant of etudiants">
+        <div class="col col-1" data-label="ID">{{ etudiant.idEtud }}</div>
+        <div class="col col-2" data-label="Nom">{{ etudiant.nom }}</div>
+        <div class="col col-3" data-label="Prenom">{{ etudiant.prenom }}</div>
+        <div class="col col-4" data-label="Numero Tel">{{ etudiant.numeroTel }}</div>
+        <div class="col col-5" data-label="Groupe">{{ etudiant.nomGroupe }}</div>
+        <div class="col col-6" data-label="Actions">
+          <button (click)="editEtudiant(etudiant)" class="button-37">Edit</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

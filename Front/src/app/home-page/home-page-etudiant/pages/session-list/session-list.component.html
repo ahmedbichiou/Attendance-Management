@@ -1,0 +1,25 @@
+
+
+  
+
+  <div>
+    <div class="container">
+      <h2>{{ cours}}</h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">IdS</div>
+          <div class="col col-2">Salle</div>
+          <div class="col col-3">Date et Temp</div>
+       
+         
+        <li class="table-row" *ngFor="let session of sessions">
+          <div class="col col-1" data-label="Id">{{ session.idSession }}</div>
+          <div class="col col-2" data-label="Nom">{{ session.salle }}</div>
+          <div class="col col-3" data-label="Prenom">{{ session.dateHeure}}</div>
+       
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+  

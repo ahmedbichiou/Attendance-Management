@@ -1,0 +1,99 @@
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    width: 65%;
+    margin-left: 34%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+    font-size: small;
+}
+
+nav ul li a:hover {
+    color: #20a0c7;
+}
+
+
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    background-color: #3ca4ee;
+    color: #fff;
+    padding: 10px 20px;
+    border: #3ca4ee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #3ca4ee;
+    border: #3ca4ee;
+    border-radius: 4px;
+}
+.back-button {
+    background-color: #008CBA; /* Blue color */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-button:hover {
+    background-color: #005f7e; /* Darker blue color */
+  }

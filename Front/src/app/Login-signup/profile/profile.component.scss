@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers everything within the card */
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
+  margin: auto;
+  position: relative; /* Needed to position the back arrow absolutely within the card */
+}
+
+.back-arrow {
+  position: absolute; /* Positioning it absolutely to place it on the left */
+  top: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position to push it to the edge */
+  width: 50px; /* Width of the arrow */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+
+  &:hover {
+    opacity: 0.8; /* Slightly dims the image on hover */
+  }
+
+  /* Responsive design: Adjust size on smaller screens if necessary */
+  @media (max-width: 768px) {
+    width: 40px; /* Smaller size on mobile devices */
+  }
+}
+
+.header {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 2rem; /* Add space below the header */
+}
+
+form {
+  width: 100%;
+
+  div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    width: calc(100% - 2rem); /* Matches input width in the login form */
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #8a8886;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    &:read-only {
+      background-color: #f3f2f1;
+      color: #8a8886;
+    }
+  }
+
+  input::placeholder {
+    color: #8a8886;
+  }
+
+  button[type="submit"] {
+    width: calc(100% - 2rem); /* Matches input width */
+    padding: 1rem;
+    margin: 1rem auto; /* Centers button and adds space above */
+    border-radius: 4px;
+    background-color: #0078d4;
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #005a9e;
+    }
+  }
+}

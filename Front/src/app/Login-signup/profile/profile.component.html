@@ -1,0 +1,39 @@
+<!--profile.component.html-->
+<div *ngIf="user" class="card">
+  <a href="javascript:history.back()">
+    <img src="../../assets/backarrow.png" alt="Back" class="back-arrow" />
+  </a>
+  <h2 class="header">User Profile</h2>
+  <form (ngSubmit)="saveChanges()">
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" type="text" [(ngModel)]="user.username" name="idUser">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" [(ngModel)]="user.email" name="email">
+    </div>
+
+    <div *ngIf="user.numeroTel">
+      <label for="role">Role:</label>
+      <input id="role" type="text" value="Etudiant" readonly>
+      <label for="nom">Nom:</label>
+      <input id="nom" type="text" [(ngModel)]="user.nom" name="nom">
+      <label for="prenom">Prénom:</label>
+      <input id="prenom" type="text" [(ngModel)]="user.prenom" name="prenom">
+      <label for="tel">Numéro de Téléphone:</label>
+      <input id="tel" type="tel" [(ngModel)]="user.numeroTel" name="numeroTel">
+      <label for="group">Groupe:</label>
+      <input id="group" type="text" [(ngModel)]="user.group.nom" name="group" readonly>
+    </div>
+
+    <div *ngIf="user.departement">
+      <label for="role">Role:</label>
+      <input id="role" type="text" value="Professeur" readonly>
+      <label for="departement">Département:</label>
+      <input id="departement" type="text" [(ngModel)]="user.departement" name="departement">
+    </div>
+
+    <button type="submit">Sauvegarder</button>
+  </form>
+</div>

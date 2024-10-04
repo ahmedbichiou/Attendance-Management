@@ -1,0 +1,31 @@
+
+
+  
+
+
+  <div>
+    <div class="container">
+      <h2>List des Sessions
+     </h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+      
+          <div class="col col-1">Id</div>
+          <div class="col col-2">Salle</div>
+          <div class="col col-2">date</div>
+          <div class="col col-3">  <button class="button-37" type="button" (click)="navigateToAddSession()">ajouter session</button></div>
+        
+        </li>
+        <li class="table-row" *ngFor="let session of sessionCoursList">
+          <div class="col col-1" data-label="Id">{{  session.idSession}}</div>
+          <div class="col col-2" data-label="Nom">{{ session.salle }}</div>
+          <div class="col col-2" data-label="Nom">{{ session.dateHeure | date: 'medium' }}</div>
+          <div class="col col-3" data-label="Actions">  <button class="button-38" type="button" (click)="deleteCourseSession(session)">Delete</button></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+

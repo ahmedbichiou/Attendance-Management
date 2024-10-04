@@ -1,0 +1,28 @@
+.groupes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+  }
+  
+  .groupe-card {
+    width: 400px; /* Double the width */
+    height: 200px; /* Double the height */
+    border-radius: 10px;
+    background-color: #ffffff; /* Add background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .groupe-card:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  }
+  
+  
+  .groupe-name {
+    font-weight: bold;
+    text-align: center;
+  }
+  

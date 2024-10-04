@@ -1,0 +1,5 @@
+<div class="groupes-container">
+  <div *ngFor="let groupe of groupes" class="groupe-card" (click)="goToGroupPage(groupe,idporfesseurADD)">
+    <div class="groupe-name">{{ groupe }}</div>
+  </div>
+</div>

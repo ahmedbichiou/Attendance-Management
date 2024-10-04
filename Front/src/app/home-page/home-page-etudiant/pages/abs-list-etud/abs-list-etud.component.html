@@ -1,0 +1,30 @@
+
+
+
+<div>
+    <div class="container">
+      <h2> {{cours}} - {{ etudiant?.nom }}  {{ etudiant?.prenom }} </h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">Id Abs</div>
+          <div class="col col-2">Id Session</div>
+          <div class="col col-3">Salle</div>
+          <div class="col col-4">Date - Heure</div>
+       
+          
+        </li>
+        <li class="table-row" *ngFor="let absence of foundAbsences">
+          <div class="col col-1" data-label="Id"> {{ absence.idAbsence }}</div>
+          <div class="col col-2" data-label="Nombre Abscences">{{ absence.session.idSession}}</div>
+          <div class="col col-3" data-label="Nombre Abscences">{{ absence.session.salle}}</div>
+          <div class="col col-4" data-label="Nombre Abscences">{{ absence.session.dateHeure}}</div>
+          
+         
+          
+          
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  

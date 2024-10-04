@@ -1,0 +1,21 @@
+
+<div>
+  <div class="container">
+    <div *ngFor="let groupe of commonGroupes">
+    <h2>{{ groupe }}</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Nom</div>
+        <div class="col col-2">Prénom</div>
+        <div class="col col-3">Absences</div>
+      </li>
+      <li class="table-row" *ngFor="let etudiant of etudiantsByGroup[groupe]">
+  
+        <div class="col col-1" data-label="Id">{{ etudiant.nom }}</div>
+        <div class="col col-2" data-label="Nom">{{ etudiant.prenom }}</div>
+        <div class="col col-3" data-label="Prenom">{{ etudiant.absences.length }}</div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="half-page2">
+  </div>
+  <div class="half-page">
+      <form class="card" (ngSubmit)="onSubmit()">
+          <div>
+              <label for="dateHeure" class="formbold-form-label">Date et Heure:</label>
+              <input type="datetime-local" id="dateHeure" name="dateHeure" [(ngModel)]="sessionCours.dateHeure" class="formbold-form-input" required>
+          </div>
+          <div>
+              <label for="salle" class="formbold-form-label">Salle:</label>
+              <input type="text" id="salle" name="salle" [(ngModel)]="sessionCours.salle" class="formbold-form-input" required>
+          </div>
+          <div>
+              <label for="group" class="formbold-form-label">Groupe:</label>
+              <select id="group" name="group" [(ngModel)]="selectedGroupName" class="formbold-form-input" required>
+                  <option *ngFor="let group of groups" [value]="group.nom">{{ group.nom }}</option>
+              </select>
+          </div>
+          <button type="submit" class="formbold-btn">Submit</button>
+      </form>
+  </div>
+  <div class="half-page2">
+  </div>
+</div>

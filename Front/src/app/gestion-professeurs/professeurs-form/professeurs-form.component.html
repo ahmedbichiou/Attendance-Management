@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="idUser">ID Utilisateur:</label>
+      <input type="number" id="idUser" name="idUser" [(ngModel)]="professeur.idUser" required>
+    </div>
+    <div>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="professeur.nom" required>
+    </div>
+    <div>
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="professeur.prenom" required>
+    </div>
+    <div>
+      <label for="departement">Département:</label>
+      <input type="text" id="departement" name="departement" [(ngModel)]="professeur.departement" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <button class="back-button" (click)="goBack()">Go Back</button>
+  

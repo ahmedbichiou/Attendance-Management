@@ -1,0 +1,33 @@
+
+
+  <div>
+    <div class="container">
+      <h2>{{ etudiant?.nom }}  {{ etudiant?.prenom }} </h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">Cours</div>
+          <div class="col col-2">Description</div>
+          <div class="col col-3">Abs Autorisees</div>
+          <div class="col col-4">Abscences</div>
+          <div class="col col-5"></div>
+          <div class="col col-6"></div>
+          
+        </li>
+        <li class="table-row" *ngFor="let cours of coursList">
+          <div class="col col-1" data-label="Id">{{ cours.nomCours }}</div>
+          <div class="col col-2" data-label="Nom">{{ cours.description }}</div>
+          <div class="col col-3" data-label="Prenom">{{ cours.absencesAutorisees }}</div>
+          <div class="col col-4" data-label="Nombre Abscences">{{ getAbsencesCount(cours) }}</div>
+          <div class="col col-5" data-label="Actions">
+            <button  (click)="goToabsPage(cours)" class="button-37">Absences</button>
+          
+          </div>
+          <div class="col col-6" data-label="Actions">
+            <button  (click)="viewSessions(cours)" class="button-38">sessions</button>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  

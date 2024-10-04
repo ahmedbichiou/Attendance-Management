@@ -1,0 +1,44 @@
+<!--   <table class="groupe-table">
+    <thead>
+      <tr>
+        <th class="table-header">Nom</th>
+      
+        <th class="table-header">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let groupe of groupes" (click)="saveSelectedGroup(groupe)">
+        <td>{{ groupe.nom }}</td>
+        
+        <td>
+          <button class="action-button delete-button" type="button" (click)="deleteGroupe(groupe)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="action-button create-button" (click)="navigateTo('./createGroupe')">Create Groupe</button>
+
+  <button class="back-button" (click)="goBack()">Go Back</button>
+   -->
+   <div class="container">
+    <h2>Groupes List</h2>
+    <table class="groupe-table">
+      <thead>
+        <tr>
+          <th class="table-header">Nom</th>
+          <th class="table-header">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let groupe of groupes" (click)="saveSelectedGroup(groupe)">
+          <td>{{ groupe.nom }}</td>
+          <td>
+            <button class="action-button delete-button" type="button" (click)="deleteGroupe(groupe)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="action-button create-button" (click)="navigateTo('./createGroupe')">Create Groupe</button>
+  <button class="back-button" (click)="goBack()">Go Back</button>
+  

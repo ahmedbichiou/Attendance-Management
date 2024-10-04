@@ -1,0 +1,46 @@
+<form [formGroup]="sessionForm" (ngSubmit)="onSubmit()" class="wrapper">
+  <div class="half-page">
+    <div class="card">
+      <div class="formbold-input-flex">
+        <div>
+          <label for="raison" class="formbold-form-label">Raison:</label>
+          <select formControlName="raison" id="raison" class="formbold-form-input">
+            <option *ngFor="let reason of raisonOptions" [value]="reason">{{ reason }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="statut" class="formbold-form-label">Statut:</label>
+          <select formControlName="statut" id="statut" class="formbold-form-input">
+            <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="sessionId" class="formbold-form-label">Session ID:</label>
+        <select formControlName="sessionId" id="sessionId" class="formbold-form-input">
+          <option *ngFor="let session of filteredSessions" [value]="session.idSession">{{ session.idSession }} {{ session.dateHeure }}</option>
+        </select>
+      </div>
+      <button type="submit" class="formbold-btn">Add Absence</button>
+    </div>
+  </div>
+  <div class="half-page2">
+    <div class="card">
+      <div class="etudiant-info">
+        <div class="avatar">
+          <img src="../../assets/avatar.png">
+        </div>
+        <div *ngIf="etudiant">
+          <div class="detail">
+            <span class="label">Nom:</span>
+            <span>{{ etudiant.nom }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">Prenom:</span>
+            <span>{{ etudiant.prenom }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">Numero Tel:</span>
+            <span>{{ etudiant.numeroTel }}</span>
+          </div>
+          </div>

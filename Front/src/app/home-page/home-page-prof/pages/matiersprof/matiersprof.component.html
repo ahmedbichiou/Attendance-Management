@@ -1,0 +1,12 @@
+<div *ngIf="group">
+  <h2>{{ group.nom }}</h2>
+</div>
+
+<div class="groupes-container">
+  <div *ngFor="let course of filteredCourses" class="groupe-card" (click)="goToFeuilleAbsence(course)">
+    <div class="groupe-name">
+      <h2>{{ course.nomCours }}</h2> <br>
+      {{ course.description }}
+    </div>
+  </div>
+</div>

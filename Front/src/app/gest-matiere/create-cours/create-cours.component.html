@@ -1,0 +1,46 @@
+<div class="wrapper">
+<div class="half-page2">
+   
+    
+</div>
+<div class="half-page">
+<form class="card" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nomCours" class="formbold-form-label">Nom du Cours:</label>
+    <input type="text" id="nomCours" name="nomCours" [(ngModel)]="cours.nomCours" class="formbold-form-input" required>
+  </div>
+  <div>
+    <label for="description" class="formbold-form-label">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="cours.description" class="formbold-form-input" required></textarea>
+  </div>
+  <div>
+    <label for="professeur" class="formbold-form-label">Professeur:</label>
+    <select id="professeur" name="professeur" [(ngModel)]="selectedProfesseurId" class="formbold-form-input" required>
+      <option *ngFor="let professeur of professeurs" [value]="professeur.idProfesseur">{{ professeur.nom }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="group" class="formbold-form-label">Groupe:</label>
+    <select id="group" name="group" [(ngModel)]="selectedGroupName" class="formbold-form-input" required>
+      <option *ngFor="let group of groups" [value]="group.nom">{{ group.nom }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="absencesAutorisees" class="formbold-form-label">Absences Autorisées:</label>
+    <input type="number" id="absencesAutorisees" name="absencesAutorisees" [(ngModel)]="cours.absencesAutorisees" class="formbold-form-input" required>
+  </div>
+  <div>
+    <label for="dateHeure" class="formbold-form-label">Date et Heure:</label>
+    <input type="datetime-local" id="dateHeure" name="dateHeure" [(ngModel)]="sessionCours.dateHeure" class="formbold-form-input" required>
+  </div>
+  <div>
+    <label for="salle" class="formbold-form-label">Salle:</label>
+    <input type="text" id="salle" name="salle" [(ngModel)]="sessionCours.salle" class="formbold-form-input" required>
+  </div>
+  <!-- You can add other fields here if needed -->
+  <button type="submit" class="formbold-btn">Submit</button>
+</form></div>
+<div class="half-page2">
+   
+    
+</div></div>
