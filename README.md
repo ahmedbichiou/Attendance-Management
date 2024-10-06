@@ -32,7 +32,7 @@ Attendance Management is an application designed to help educational institution
 
 - **Student Functionality**: Students can view their schedules and absences.
 - **Two-Factor Authentication (2FA)**: Provides extra security for user accounts.
-- 
+  
   ![ABS5](https://github.com/user-attachments/assets/d55c80fd-d2ad-43b3-8708-4a896b23ed30)
 
 - **Email Notifications**: Parents or students receive emails about absences.
